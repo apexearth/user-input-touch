@@ -14,7 +14,10 @@
     "type": "git",
     "url": "git@github.com:apexearth/user-input-touch.git"
   },
-  "author": "apexearth@gmail.com",
+  "author": {
+    "name": "Christopher Jacobs",
+    "email": "apexearth@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/apexearth/user-input-touch/issues"
