@@ -20,6 +20,9 @@ function TouchInput(input) {
     this._input.on('touchend', handleTouchEvent.bind(this, 'touchend'))
     this._input.on('touchmove', handleTouchEvent.bind(this, 'touchmove'))
 
+    that.touches        = []
+    that.changedTouches = []
+
     function handleTouchEvent(name, e) {
         that.touches        = e.touches
         that.changedTouches = e.changedTouches

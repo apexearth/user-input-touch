@@ -1,6 +1,6 @@
 {
   "name": "user-input-touch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "User input tracking for the touch.",
   "main": "src/user-input-touch.js",
   "directories": {
