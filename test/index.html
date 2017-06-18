@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>user-input-touch - User Test</title>
+    <script src="../build/module.js"></script>
+</head>
+<body style="background-color: #222">
+
+<div style="position: fixed; left: 50%; top: 20%; margin-left: -300px;
+                            width: 600px; background-color: #444;
+                            color: #ccc; font-size: 18pt; padding: 20px;">
+    <pre>var touch = window.touchInput(document)</pre>
+    <pre id="output" style='margin: 0'></pre>
+</div>
+
+<script type="text/javascript">
+    var touch = window.touchInput(document) // Default target is `document.body`
+    touch._input.on("touchmove", handleTouchEvent)
+    touch._input.on("touchstart", handleTouchEvent)
+    touch._input.on("touchend", handleTouchEvent)
+    function handleTouchEvent(e) {
+        document.getElementById("output").innerHTML = e + "\n" + JSON.stringify({
+                x     : touch.x,
+                y     : touch.y,
+                touch0: touch.touch0,
+                touch1: touch.touch1,
+                touch2: touch.touch2,
+                wheel : touch.wheel
+            }, null, 2)
+    }
+</script>
+
+</body>
+</html>
