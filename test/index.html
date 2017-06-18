@@ -19,14 +19,15 @@
     touch._input.on("touchstart", handleTouchEvent)
     touch._input.on("touchend", handleTouchEvent)
     function handleTouchEvent(e) {
-        document.getElementById("output").innerHTML = e + "\n" + JSON.stringify({
-                x     : touch.x,
-                y     : touch.y,
-                touch0: touch.touch0,
-                touch1: touch.touch1,
-                touch2: touch.touch2,
-                wheel : touch.wheel
-            }, null, 2)
+        var count   = e.touches.length;
+        var touches = []
+        for (var i = 0; i < count; i++) {
+            touches.push({
+                pageX: e.touches[i].pageX,
+                pageY: e.touches[i].pageY,
+            })
+        }
+        document.getElementById("output").innerHTML = JSON.stringify(touches, null, 2)
     }
 </script>
 
