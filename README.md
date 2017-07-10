@@ -2,7 +2,8 @@
 
 ![](https://travis-ci.org/apexearth/user-input-touch.svg)
 
-Base class for creating user inputs.
+Touch input state tracking, used by the `user-input` package.
+Useful for game-loop style applications.
 
 ## Usage
 
